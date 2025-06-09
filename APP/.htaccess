@@ -1,0 +1,12 @@
+# el comentario es un # al principio de la linea 
+# preguntamos si existe mod_rewrite
+<ifModule mod_rewrite.c>
+		#si existe lo encedemos 
+	RewriteEngine On
+		#si no es un directorio
+	RewriteCond %{REQUEST_FILENAME} !-d
+		#si no es un fichero
+	RewriteCond %{REQUEST_FILENAME} !-f
+		#todas las peticiones al index.php
+	RewriteRule . index.php
+</ifmodule>

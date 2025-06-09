@@ -1,0 +1,232 @@
+:root {
+  --COLOR_PRINCIPAL: #39488f;
+  --COLOR_2: #d6d53f;
+  --bs-primary-rgb: 0, 118, 165;
+  --bs-pagination-color: #1c2b71;
+}
+
+/* Navbar fijo en escritorio y tablet */
+#navbarOG {
+  z-index: 9999;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+body {
+  padding-top: 80px;
+}
+
+#logout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.agenda {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  resize: none;
+}
+
+.agenda .calendario_section {
+  width: 40%;
+  min-width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: end;
+  padding: 2em;
+}
+
+.agenda .calendario_section .mb-3 {
+  width: 100%;
+  min-width: 350px;
+  max-width: 100%;
+}
+
+.agenda .calendario_section input {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.agenda .calendario_section .calendario {
+  width: 100%;
+  min-width: 350px;
+  max-width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  border: 1px solid #000;
+}
+
+.agenda .calendario_section .top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.agenda .calendario_section .top h1 {
+  font-size: 1.5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agenda .calendario_section .top h1 p {
+  font-weight: normal;
+  font-size: 1.5em;
+  color: var(--COLOR_PRINCIPAL);
+  text-align: center;
+  margin: 0px;
+  width: 50%;
+}
+
+.agenda .calendario_section .top h1 .boton_y {
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  background: var(--COLOR_PRINCIPAL);
+  color: #fff;
+  width: 2em;
+  height: 2em;
+  margin: 0 10%;
+}
+
+.agenda .calendario_section h2 {
+  font-size: 1.1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agenda .calendario_section .top h2 p {
+  font-weight: normal;
+  font-size: 1.5em;
+  color: var(--COLOR_PRINCIPAL);
+  text-align: center;
+  margin: 0px;
+  width: 50%;
+}
+
+.agenda .calendario_section .top h2 .boton_n {
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+  background: var(--COLOR_PRINCIPAL);
+  color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 5%;
+}
+
+.agenda .calendario_section .dias {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-gap: 0 5px;
+}
+
+.agenda .calendario_section .dias p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: #454647;
+  margin-bottom: 0.1em;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.agenda .calendario_section .dias p.marcador {
+  font-size: 1.5em;
+  color: var(--COLOR_PRINCIPAL);
+}
+
+.agenda .calendario_section a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ddd;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.agenda .calendario_section a.evento {
+  background: var(--COLOR_PRINCIPAL);
+}
+
+.agenda .calendario_section .dias .seleccionado {
+  border: 2px solid var(--COLOR_PRINCIPAL) !important;
+  color: var(--COLOR_PRINCIPAL);
+  background: var(--COLOR_2);
+  border-radius: 8px;
+}
+
+.agenda .calendario_section .dias span:not(.seleccionado) {
+  border: 2px dashed #fff;
+  border-radius: 8px;
+}
+
+.agenda .calendario_section .dias span,
+.agenda .calendario_section .dias a {
+  padding: 0.3em;
+}
+
+.agenda .calendario_section a:hover {
+  color: #fff !important;
+  transition: 0.4s;
+  transform: scale(1.1);
+}
+
+.agenda .calendario_section .dias .seleccionado:hover {
+  color: var(--COLOR_PRINCIPAL) !important;
+}
+
+#columna_eventos {
+  padding: 2em;
+  color: #000;
+  min-width: 300px;
+}
+
+#eventos_dia_usuario {
+  background: #fff;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#eventos_dia_usuario h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#titulo_inicio{
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  #logout-container {
+    justify-content: flex-end;
+    width: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #navbarOG {
+    padding-bottom: 20px;
+  }
+}
